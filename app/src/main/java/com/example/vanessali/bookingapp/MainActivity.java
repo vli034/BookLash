@@ -1,5 +1,6 @@
 package com.example.vanessali.bookingapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    public static final int CREATE_ACC = 2;
     private Button loginBtn;
     private Button fbBtn;
     private Button googleBtn;
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         createAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                launchNextActivity();
 
             }
         });
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void launchNextActivity(){
+        Intent intent = new Intent(
+                getApplicationContext(),CreateProfileActivity.class);
+        startActivityForResult(intent, CREATE_ACC);
 
 
     }

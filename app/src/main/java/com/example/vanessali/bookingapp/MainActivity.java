@@ -52,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        fbBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(
+                        getApplicationContext(),ServiceActivity.class);
+                startActivityForResult(intent, 4);
+
+            }
+        });
+
     }
 
     private void launchNextActivity(){

@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".CreateProfileActivity" />
         <activity android:name=".ServiceActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".CalendarActivity"></activity>
     </application>
 
 </manifest>

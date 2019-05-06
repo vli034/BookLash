@@ -4,19 +4,147 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    android:background="#F7F7F7"
+    tools:context=".ProfileActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+
+    <View
+        android:id="@+id/view_pink"
+        android:layout_width="wrap_content"
+        android:layout_height="336dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_pink"
+        app:layout_constraintBottom_toTopOf="@+id/view_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Jessica Smith"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="125dp"
+        android:layout_height="114dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="add log out an tool bar"
+        app:layout_constraintBottom_toTopOf="@+id/view_pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/include"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_white"
+        android:layout_width="293dp"
+        android:layout_height="379dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/background_square"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:id="@+id/date_appt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/view_white"
+        app:layout_constraintStart_toStartOf="@+id/view_white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="Your Next Appointment is:"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_white"
+        app:layout_constraintEnd_toEndOf="@+id/view_white"
+        app:layout_constraintStart_toStartOf="@+id/view_white"
+        app:layout_constraintTop_toTopOf="@+id/view_white"
+        app:layout_constraintVertical_bias="0.050000012" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="176dp"
-        android:text="PROFILE PAGE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="16dp"
+        android:fontFamily="cursive"
+        android:text="Happy Lashing!"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_white"
+        app:layout_constraintEnd_toEndOf="@+id/view_white"
+        app:layout_constraintStart_toStartOf="@+id/view_white"
+        app:layout_constraintTop_toBottomOf="@+id/view_pink"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <Button
+        android:id="@+id/btn_new_apt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:background="#DD95B6"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Book another appointment"
+        app:layout_constraintEnd_toEndOf="@+id/view_white"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/view_white"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
 </android.support.constraint.ConstraintLayout>

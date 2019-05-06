@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:text="CHOOSE A DATE"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintEnd_toStartOf="@+id/include"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/include"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="0dp"
+        android:layout_height="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <TextView
+        android:id="@+id/slot_view"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:background="#A24979"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:text="Time Slots Available On:"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_view" />
+
+    <TableRow
+        android:id="@+id/tr_slot_one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slot_view">
+
+        <TextView
+            android:id="@+id/time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="80dp"
+            android:text="10:00am"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="80dp"
+            android:text="1:00pm"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/time3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4:00pm"
+            android:textColor="@android:color/black" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tr_slot_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tr_slot_one">
+
+        <TextView
+            android:id="@+id/time4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="80dp"
+            android:text="11:00am"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/time5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="80dp"
+            android:text="2:00pm"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/time6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5:00pm"
+            android:textColor="@android:color/black" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_pink"
+        android:text="OK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tr_slot_two"
+        app:layout_constraintVertical_bias="0.89" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_pink"
+        android:text="CANCEL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ok"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tr_slot_two"
+        app:layout_constraintVertical_bias="0.89" />
+
+    <TextView
+        android:id="@+id/my_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tr_slot_one"
+        app:layout_constraintEnd_toStartOf="@+id/slot_view"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toEndOf="@+id/slot_view" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="83dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cancel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tr_slot_two"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/blacklogo" />
+
+</android.support.constraint.ConstraintLayout>

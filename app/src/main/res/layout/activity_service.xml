@@ -6,4 +6,125 @@
     android:layout_height="match_parent"
     tools:context=".ServiceActivity">
 
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+    <Button
+        android:id="@+id/btn_classic"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/btn_shadow"
+        android:text="classic full set   $100"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <Button
+        android:id="@+id/btn_c_refill"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_shadow"
+        android:text="Classic Re-fill  $50"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_classic" />
+
+    <Button
+        android:id="@+id/btn_hybrid"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_shadow"
+        android:text="Hybrid Full Set  $120"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_c_refill" />
+
+    <Button
+        android:id="@+id/btn_hy_refill"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_shadow"
+        android:text="Hybrid Re-fill  $60"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hybrid" />
+
+    <Button
+        android:id="@+id/btn_volume"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_shadow"
+        android:text="Volume Full set  $140"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hy_refill" />
+
+    <Button
+        android:id="@+id/btn_vol_refill"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_shadow"
+        android:elevation="50dp"
+        android:text="Volume re-fill  $70"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_volume"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHOOSE YOUR SERVICE"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintEnd_toStartOf="@+id/include"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/include"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="91dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_vol_refill"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/blacklogo" />
+
+
 </android.support.constraint.ConstraintLayout>

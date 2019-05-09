@@ -10,6 +10,7 @@ public class ServiceActivity extends AppCompatActivity {
 
     private Button classicFull;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

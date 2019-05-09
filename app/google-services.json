@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "521133691716",
+    "firebase_url": "https://booklash-bb936.firebaseio.com",
+    "project_id": "booklash-bb936",
+    "storage_bucket": "booklash-bb936.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521133691716:android:7c9922c7ca6dea13",
+        "android_client_info": {
+          "package_name": "com.example.vanessali.bookingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521133691716-52adftbnn2022bg83b2jc5kqgm2togb6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vanessali.bookingapp",
+            "certificate_hash": "68b38cedbc97122cbbfdfbdb8520bf3e708b898b"
+          }
+        },
+        {
+          "client_id": "521133691716-pgf0knpvcqlirr3lmehcahgo1649n73t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6kHRvQsG2Tl_4oe8xD9OoojE4EWhO0f4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521133691716-pgf0knpvcqlirr3lmehcahgo1649n73t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

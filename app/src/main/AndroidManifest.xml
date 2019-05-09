@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.vanessali.bookingapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- this line adds the required permission request -->
     <application
+        android:name=".HomePage"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,8 +22,9 @@
         </activity>
         <activity android:name=".CreateProfileActivity" />
         <activity android:name=".ServiceActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".CalendarActivity"></activity>
+        <activity android:name=".AppointmentActivity" />
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

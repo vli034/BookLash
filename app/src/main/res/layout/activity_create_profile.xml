@@ -109,7 +109,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="password"
+        android:hint="password (must be min of 6 characters)"
         android:inputType="textPassword"
         android:textColorHint="#707070"
         app:layout_constraintEnd_toEndOf="parent"

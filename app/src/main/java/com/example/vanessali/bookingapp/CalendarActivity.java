@@ -1,7 +1,6 @@
 package com.example.vanessali.bookingapp;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class CalendarActivity extends AppCompatActivity implements DialogBox.DialogBoxListener{
     public static final int PROFILE_ACC = 6;
@@ -84,7 +81,7 @@ public class CalendarActivity extends AppCompatActivity implements DialogBox.Dia
     // creating and override method to allow us to direct where we want the dialog box to go when clicked yes
     public void onYesClicked(){
         Intent intent = new Intent(
-                getApplicationContext(),ProfileActivity.class);// when yes is clicked moved to next activity
+                getApplicationContext(),AppointmentActivity.class);// when yes is clicked moved to next activity
         startActivityForResult(intent, PROFILE_ACC);
         String value = myDate.getText().toString();// get value from textView
         intent.putExtra("date",value); //Pass that value to profile activity when Yes is clicked in dialog box

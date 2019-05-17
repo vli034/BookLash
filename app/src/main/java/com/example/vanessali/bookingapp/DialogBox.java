@@ -33,7 +33,10 @@ public class DialogBox extends AppCompatDialogFragment {
                     }
                 });
        return builder.create();
+
     }
+
+
 
     // Interface is created for communication between dialog box activity
     public interface DialogBoxListener{

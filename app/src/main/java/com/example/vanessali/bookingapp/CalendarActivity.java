@@ -4,17 +4,21 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
+import static com.example.vanessali.bookingapp.CreateProfileActivity.SERVICE;
+
 public class CalendarActivity extends AppCompatActivity implements DialogBox.DialogBoxListener{
-    public static final int PROFILE_ACC = 6;
+    public static final int APPOINTMENT = 6;
     private CalendarView calendarView;
     private Button btnOK;
     private Button btnCancel;
     private TextView myDate;
+    private TextView toolBarTitle;
     private TextView timeOption1;
     private TextView timeOption2;
     private TextView timeOption3;
@@ -26,6 +30,12 @@ public class CalendarActivity extends AppCompatActivity implements DialogBox.Dia
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
+        // Customizing ToolBar title - no back button
+        Toolbar toolbar = findViewById(R.id.include);
+        setSupportActionBar(toolbar);
+        toolBarTitle = findViewById(R.id.toolbar_title);
+        toolBarTitle.setText("CHOOSE A DATE");
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         btnOK = findViewById(R.id.btn_ok);
         btnCancel = findViewById(R.id.btn_cancel);
@@ -45,7 +55,8 @@ public class CalendarActivity extends AppCompatActivity implements DialogBox.Dia
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //havent decided where the cancel button is going to take user
+                launchBackwards();
+
             }
         });
 
@@ -65,10 +76,6 @@ public class CalendarActivity extends AppCompatActivity implements DialogBox.Dia
 
 
 
-
-
-
-
     }
 
     //Create an instance of your dialog box in the activity you want it to appear in
@@ -82,11 +89,16 @@ public class CalendarActivity extends AppCompatActivity implements DialogBox.Dia
     public void onYesClicked(){
         Intent intent = new Intent(
                 getApplicationContext(),AppointmentActivity.class);// when yes is clicked moved to next activity
-        startActivityForResult(intent, PROFILE_ACC);
+        startActivityForResult(intent, APPOINTMENT);
         String value = myDate.getText().toString();// get value from textView
         intent.putExtra("date",value); //Pass that value to profile activity when Yes is clicked in dialog box
         startActivity(intent);
 
+    }
+
+    private void launchBackwards(){
+        Intent intent = new Intent(getApplicationContext(),ServiceActivity.class);
+        startActivityForResult(intent,SERVICE);
     }
 
 

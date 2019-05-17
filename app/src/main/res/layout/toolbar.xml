@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tool_bar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#DD95B6">
+<!--<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/tool_bar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#DD95B6"-->
+    <!--android:elevation="4dp"-->
 
-</android.support.v7.widget.Toolbar>
+   <!--&gt;-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/toolbar_title"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:fontFamily="sans-serif-condensed"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textSize="20sp" />-->
+
+    <!---->
+
+
+<!--</android.support.v7.widget.Toolbar>-->
+

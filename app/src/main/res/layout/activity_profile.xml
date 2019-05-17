@@ -24,17 +24,6 @@
         app:srcCompat="@android:drawable/sym_def_app_icon" />
 
 
-    <Button
-        android:id="@+id/btn_sign_out"
-        android:layout_width="267dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Signout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
@@ -52,47 +41,176 @@
     <View
         android:id="@+id/box_one"
         android:layout_width="363dp"
-        android:layout_height="79dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/background_square"
-        app:layout_constraintBottom_toTopOf="@+id/btn_sign_out"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_three" />
 
     <View
         android:id="@+id/box_two"
-        android:layout_width="363dp"
-        android:layout_height="79dp"
+        android:layout_width="365dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/background_square"
         app:layout_constraintBottom_toTopOf="@+id/box_three"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name"
-        tools:layout_editor_absoluteX="24dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
     <View
         android:id="@+id/box_three"
         android:layout_width="363dp"
-        android:layout_height="79dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="27dp"
         android:background="@drawable/background_square"
         app:layout_constraintBottom_toTopOf="@+id/box_one"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_two" />
+
+    <ImageButton
+        android:id="@+id/history_btn3"
+        android:layout_width="22dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/box_one"
+        app:layout_constraintEnd_toEndOf="@+id/box_one"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/box_one"
+        app:layout_constraintTop_toTopOf="@+id/box_one"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_history" />
+
+    <ImageButton
+        android:id="@+id/time_btn2"
+        android:layout_width="21dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/box_three"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/box_three"
+        app:layout_constraintTop_toTopOf="@+id/box_three"
+        app:srcCompat="@drawable/ic_hour" />
 
     <TextView
         android:id="@+id/email_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Email Display"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/box_two"
+        app:layout_constraintEnd_toEndOf="@+id/box_two"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="@+id/box_two"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_profile" />
+
+    <TextView
+        android:id="@+id/Edt_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Edit Profile"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/box_two"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="@+id/box_two"
+        app:layout_constraintTop_toTopOf="@+id/box_two" />
+
+    <TextView
+        android:id="@+id/edt_current_apt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Upcoming Appointment"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/box_three"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/box_three"
+        app:layout_constraintTop_toTopOf="@+id/box_three" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="History"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/box_one"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="@+id/box_one"
+        app:layout_constraintTop_toTopOf="@+id/box_one" />
+
+    <TextView
+        android:id="@+id/current_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Email Display"
-        app:layout_constraintBottom_toBottomOf="@+id/box_two"
-        app:layout_constraintEnd_toEndOf="@+id/box_two"
-        app:layout_constraintStart_toStartOf="@+id/box_two"
-        app:layout_constraintTop_toTopOf="@+id/box_two" />
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/box_three"
+        app:layout_constraintEnd_toEndOf="@+id/box_three"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="@+id/box_three"
+        app:layout_constraintTop_toBottomOf="@+id/edt_current_apt"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/box_one"
+        app:layout_constraintEnd_toEndOf="@+id/box_one"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/box_one"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <ImageButton
+        android:id="@+id/edit_btn1"
+        android:layout_width="23dp"
+        android:layout_height="21dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/box_two"
+        app:layout_constraintEnd_toStartOf="@+id/box_two"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toEndOf="@+id/box_two"
+        app:layout_constraintTop_toBottomOf="@+id/box_two"
+        app:layout_constraintVertical_bias="0.76"
+        app:srcCompat="@drawable/ic_edit" />
+
 </android.support.constraint.ConstraintLayout>

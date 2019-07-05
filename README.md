@@ -5,6 +5,9 @@ BookLash will provide clients the ability to see all the available time slots an
 # UX/UI Design 
 ![bookApp_artBoards](https://user-images.githubusercontent.com/39067937/60747914-c2759380-9f56-11e9-9bd0-8ca590ac4a3d.png)
 
+![bookApp_artboard2](https://user-images.githubusercontent.com/39067937/60748081-4bd99580-9f58-11e9-9e34-9bb464236a0e.png)
+
+
 
 # Technology Used 
 - Firebase: 

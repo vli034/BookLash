@@ -4,4 +4,4 @@ BookLash will provide clients the ability to see all the available time slots an
 
 
 # UX/UI Design
-![iPhone 6-7-8 – 1](https://user-images.githubusercontent.com/39067937/60747356-8fc99c00-9f52-11e9-88b7-01f9a104851a.png)
+![Webp net-resizeimage (11)](https://user-images.githubusercontent.com/39067937/60747385-d0c1b080-9f52-11e9-83e2-e45c8103787e.png)

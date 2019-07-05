@@ -6,24 +6,24 @@ BookLash will provide clients the ability to see all the available time slots an
 # Technology Used 
 - Firebase: 
   - Storage
--Authentication 
-  Notification 
-  Database 
--Android aspects 
-  Dialog box
-  Camera 
--Additional:
-  Google pay 
-  Credit Card
-  Paypal 
+  - Authentication 
+  - Notification 
+  - Database 
+- Android aspects 
+  - Dialog box
+  - Camera 
+- Additional:
+  - Google pay 
+  - Credit Card
+  - Paypal 
 
 # Implemented Data Structures
 
 # Areas of this App that needs imporovement:
--Camera API is deprecated because camera2 is a fucking bitch
--Setting home icon on left side 
--Date format should be String i.e ‘ Wednesday, June 12, 2019’
--Dialog box should be class instead of activity 
+- Camera API is deprecated because camera2 is a fucking bitch
+- Setting home icon on left side 
+- Date format should be String i.e ‘ Wednesday, June 12, 2019’
+- Dialog box should be class instead of activity 
 
 # Link to Design Doc 
-Formal document that includes UX/UI design 
+Formal document that includes UX/UI design. 

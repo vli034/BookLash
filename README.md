@@ -4,8 +4,8 @@ BookLash will provide clients the ability to see all the available time slots an
 
 
 # Technology Used 
--Firebase: 
--Storage
+- Firebase: 
+  - Storage
 -Authentication 
   Notification 
   Database 

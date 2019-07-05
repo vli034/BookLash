@@ -5,3 +5,4 @@ BookLash will provide clients the ability to see all the available time slots an
 
 # UX/UI Design
 ![Webp net-resizeimage (11)](https://user-images.githubusercontent.com/39067937/60747385-d0c1b080-9f52-11e9-83e2-e45c8103787e.png)
+![Webp net-resizeimage (12)](https://user-images.githubusercontent.com/39067937/60747456-462d8100-9f53-11e9-984a-107bf2a0f06d.png)

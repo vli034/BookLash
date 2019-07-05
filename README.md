@@ -3,6 +3,27 @@ A mock application to help independent aesthetician business owners organize app
 BookLash will provide clients the ability to see all the available time slots and services provided by the business owner, this allows flexibility for both owner and client. It will implement google pay and credit card information  to reduce  the frequency of no shows and last minute cancellation. The applications aims to provide seamless booking for clients and reduce common issues that many entrepreneurs run into when running an online home business. 
 
 
-# UX/UI Design
-![Webp net-resizeimage (11)](https://user-images.githubusercontent.com/39067937/60747385-d0c1b080-9f52-11e9-83e2-e45c8103787e.png)
-![Webp net-resizeimage (12)](https://user-images.githubusercontent.com/39067937/60747456-462d8100-9f53-11e9-984a-107bf2a0f06d.png)
+# Technology Used 
+-Firebase: 
+  Storage
+  Authentication 
+  Notification 
+  Database 
+-Android aspects 
+  Dialog box
+  Camera 
+-Additional:
+  Google pay 
+  Credit Card
+  Paypal 
+
+# Implemented Data Structures
+
+# Areas of this App that needs imporovement:
+-Camera API is deprecated because camera2 is a fucking bitch
+-Setting home icon on left side 
+-Date format should be String i.e ‘ Wednesday, June 12, 2019’
+-Dialog box should be class instead of activity 
+
+# Link to Design Doc 
+Formal document that includes UX/UI design 

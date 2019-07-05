@@ -20,7 +20,7 @@ BookLash will provide clients the ability to see all the available time slots an
 # Implemented Data Structures
 
 # Areas of this App that needs imporovement:
-- Camera API is deprecated because camera2 is a fucking bitch
+- Camera API is deprecated
 - Setting home icon on left side 
 - Date format should be String i.e ‘ Wednesday, June 12, 2019’
 - Dialog box should be class instead of activity 

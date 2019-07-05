@@ -20,13 +20,17 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.example.vanessali.bookingapp.AppointmentActivity.PROFILE_PAGE;
 
 public class CreateProfileActivity extends AppCompatActivity {
     public static final int SERVICE = 3;
@@ -73,7 +77,6 @@ public class CreateProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 createAccount( emailInput.getText().toString(),password_input.getText().toString());
-
 
             }
         });
@@ -123,6 +126,10 @@ public class CreateProfileActivity extends AppCompatActivity {
                     //authenticating new user via email/password
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            FirebaseUser testUser = FirebaseAuth.getInstance().getCurrentUser();
+                            String userUid = testUser.getUid();
+
                             // if authentication is successful register the new user information
                             //to the database
                             String firstNameInput =fnameInput.getText().toString().trim();
@@ -130,31 +137,38 @@ public class CreateProfileActivity extends AppCompatActivity {
                             String emailAddressInput = emailInput.getText().toString().trim();
                             String phoneNumberInput = numberInput.getText().toString().trim();
                             String passInput = password_input.getText().toString().trim();
+                            String uidInput = userUid;
+
+
+                            //Create database collection called users
+                            FirebaseFirestore db = FirebaseFirestore.getInstance();
 
                             // Document fields that will be placed in collections
-                            Map<String, String> newUser = new HashMap<>(); //
+                            /*Map<String, String> newUser = new HashMap<>(); //
                             newUser.put("First Name", firstNameInput);
                             newUser.put("Last Name", lastNameInput);
                             newUser.put("Email", emailAddressInput);
                             newUser.put("Password", phoneNumberInput);
-                            newUser.put("Phone", passInput);
+                            newUser.put("Phone", passInput);*/
 
-                            //Create database collection called users
-                            FirebaseFirestore db = FirebaseFirestore.getInstance();
-                            db.collection("users")
-                                    .add(newUser) //add the newUser information from hashMap
-                                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            User user = new User(firstNameInput,lastNameInput,emailAddressInput,
+                                    phoneNumberInput,passInput,uidInput);
+
+
+                            db.collection("users").document(userUid)
+                                    .set(user)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
-                                        public void onSuccess(DocumentReference documentReference) {
-                                            //When successfully registered launch next activity
+                                        public void onSuccess(Void aVoid) {
                                             Toast.makeText(getApplicationContext(),"Success", Toast.LENGTH_LONG).show();
                                             launchNextActivity();
+
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(getApplicationContext(),"failed", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(),"Failed", Toast.LENGTH_LONG).show();
                                         }
                                     });
                         } else {
@@ -170,4 +184,5 @@ public class CreateProfileActivity extends AppCompatActivity {
                 getApplicationContext(),ServiceActivity.class);
         startActivityForResult(intent,SERVICE);
     }
+
 }

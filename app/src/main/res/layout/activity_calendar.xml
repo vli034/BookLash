@@ -61,6 +61,7 @@
             android:id="@+id/time1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="true"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="80dp"
             android:text="10:00am"
@@ -70,6 +71,7 @@
             android:id="@+id/time2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="true"
             android:layout_marginRight="80dp"
             android:text="1:00pm"
             android:textColor="@android:color/black" />

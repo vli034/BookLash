@@ -64,8 +64,12 @@ public class AppointmentActivity extends OptionsMenuActivity {
         // Retrieving Date data from Calendar View
         Intent intent = getIntent();
         String date = intent.getStringExtra("date");
+        //String test = intent.getStringExtra("classic");
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        //dateView.setText(date);
+        //dateView.setText(String.format("%s%s", date, test));
         dateView.setText(date);
+
 
     }
 

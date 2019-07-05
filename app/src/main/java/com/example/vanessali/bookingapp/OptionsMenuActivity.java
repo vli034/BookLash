@@ -26,8 +26,6 @@ public class OptionsMenuActivity extends AppCompatActivity{
 //                Intent intent = new Intent(this, ServiceActivity.class);
 ////                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 //                startActivity(intent);
-
-
                 finish(); // brings back to last activity in the stack
                 return true;
             case R.id.item3:

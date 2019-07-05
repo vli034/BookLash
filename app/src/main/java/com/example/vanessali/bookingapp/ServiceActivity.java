@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class ServiceActivity extends OptionsMenuActivity {
+    final static int CLASSIC_FULL = 1000;
 
     private Button classicFull;
     private TextView toolBarTitle;
@@ -36,7 +37,10 @@ public class ServiceActivity extends OptionsMenuActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(
                         getApplicationContext(),CalendarActivity.class);
-                startActivityForResult(intent, 5);
+                startActivityForResult(intent, CLASSIC_FULL);
+                //String service = Str  ("classic set");
+                //intent.putExtra("classic", service);
+                startActivity(intent);
             }
         });
     }

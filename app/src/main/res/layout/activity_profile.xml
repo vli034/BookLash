@@ -13,8 +13,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="125dp"
-        android:layout_height="114dp"
+        android:layout_width="152dp"
+        android:layout_height="148dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
@@ -30,11 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="24dp"
-        android:text="Jessica Smith"
+        android:text="test"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -168,14 +168,13 @@
         app:layout_constraintTop_toTopOf="@+id/box_one" />
 
     <TextView
-        android:id="@+id/current_app"
+        android:id="@+id/currentAppt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="@+id/box_three"
         app:layout_constraintEnd_toEndOf="@+id/box_three"
@@ -192,7 +191,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="@+id/box_one"
         app:layout_constraintEnd_toEndOf="@+id/box_one"

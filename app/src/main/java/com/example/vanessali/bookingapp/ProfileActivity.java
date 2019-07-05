@@ -1,6 +1,7 @@
 package com.example.vanessali.bookingapp;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,8 +15,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class ProfileActivity extends OptionsMenuActivity {
     public static final int EDIT_PROFILE = 11;
@@ -26,36 +32,8 @@ public class ProfileActivity extends OptionsMenuActivity {
     private TextView toolBarTitle;
     private ImageButton editProfileBtn;
     private TextView displayAppt;
+    private TextView displayName;
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // we pass an item and then we can check which items were clicked
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                // todo: goto back activity from here
-                Intent intent = new Intent(this, ServiceActivity.class);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
-                return true;
-            case R.id.item1:
-                Toast.makeText(this, " item click worked",Toast.LENGTH_SHORT).show();
-                return  true;
-            case R.id.item2:
-                signOut();
-
-                return  true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,12 +41,15 @@ public class ProfileActivity extends OptionsMenuActivity {
         setContentView(R.layout.activity_profile);
 
         displayEmail = findViewById(R.id.email_display);
-        displayAppt = findViewById(R.id.current_app);
+        displayAppt = findViewById(R.id.currentAppt);
         editProfileBtn = findViewById(R.id.edit_btn1);
+        displayName = findViewById(R.id.tv_name);
+
         //FireBase
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-        displayEmail.setText(firebaseUser.getEmail());
+        displayEmail.setText(firebaseUser.getEmail());// setting email in edt info box
+
 
         // Customizing ToolBar
         Toolbar toolbar = findViewById(R.id.include);
@@ -78,9 +59,7 @@ public class ProfileActivity extends OptionsMenuActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         // Retrieving Date data from Calendar View
-        Intent intent = getIntent();
-        String date = intent.getStringExtra("hi");
-        displayAppt.setText(date);
+
 
 
         //onClickListeners
@@ -93,8 +72,37 @@ public class ProfileActivity extends OptionsMenuActivity {
             }
         });
 
-
+        readData();
 
     }
+
+
+    private void readData(){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        final String currentUser= user.getUid();//getting unique user id
+
+        db.collection("users")
+                .whereEqualTo("uId",currentUser)// TODO: important to note that UID i retrieving the unique id of the current user
+                // in order to get db information from logged in users it needs to identify the unique id they're associated with
+                // then firebse will be able to retrieve document snap shot information
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (DocumentSnapshot document : task.getResult()) {
+                                displayAppt.setText((CharSequence) document.get("Appointment"));
+                                displayName.setText((CharSequence) document.get("firstName"));
+
+                            }
+                        } else {
+                            Toast.makeText(getApplicationContext(),"No such document",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+    }
+
+
 
 }

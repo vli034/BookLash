@@ -58,9 +58,6 @@ public class ProfileActivity extends OptionsMenuActivity {
         toolBarTitle.setText("PROFILE");
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        // Retrieving Date data from Calendar View
-
-
 
         //onClickListeners
         editProfileBtn.setOnClickListener(new View.OnClickListener() {

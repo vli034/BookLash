@@ -48,6 +48,7 @@ public class CreateProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile);
+
         // Customizing ToolBar title - no back button
         Toolbar toolbar = findViewById(R.id.include);
         setSupportActionBar(toolbar);
@@ -68,8 +69,7 @@ public class CreateProfileActivity extends AppCompatActivity {
         numberInput.addTextChangedListener(loginTextWatcher);
         emailInput.addTextChangedListener(loginTextWatcher);
         password_input.addTextChangedListener(loginTextWatcher);
-        //Initialize Fire Base
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();  //Initialize Fire Base
 
 
         //OnClick Listener
@@ -130,8 +130,7 @@ public class CreateProfileActivity extends AppCompatActivity {
                             FirebaseUser testUser = FirebaseAuth.getInstance().getCurrentUser();
                             String userUid = testUser.getUid();
 
-                            // if authentication is successful register the new user information
-                            //to the database
+                            // if authentication is successful register the new user information to the db
                             String firstNameInput =fnameInput.getText().toString().trim();
                             String lastNameInput = lnameInput.getText().toString().trim();
                             String emailAddressInput = emailInput.getText().toString().trim();
@@ -143,18 +142,10 @@ public class CreateProfileActivity extends AppCompatActivity {
                             //Create database collection called users
                             FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-                            // Document fields that will be placed in collections
-                            /*Map<String, String> newUser = new HashMap<>(); //
-                            newUser.put("First Name", firstNameInput);
-                            newUser.put("Last Name", lastNameInput);
-                            newUser.put("Email", emailAddressInput);
-                            newUser.put("Password", phoneNumberInput);
-                            newUser.put("Phone", passInput);*/
-
                             User user = new User(firstNameInput,lastNameInput,emailAddressInput,
                                     phoneNumberInput,passInput,uidInput);
 
-
+                            //Adding the user input to database in collection users
                             db.collection("users").document(userUid)
                                     .set(user)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -167,18 +158,20 @@ public class CreateProfileActivity extends AppCompatActivity {
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
-                                        public void onFailure(@NonNull Exception e) {
+                                        public void onFailure(@NonNull Exception e) { //basic error checking
                                             Toast.makeText(getApplicationContext(),"Failed", Toast.LENGTH_LONG).show();
                                         }
                                     });
-                        } else {
+                        } else { // checks to make sure that each user has a unique email address per account
                             Toast.makeText(getApplicationContext(),"This email address already exists with an account", Toast.LENGTH_SHORT).show();
                         }
 
                     }
                 });
-    }
+        }
 
+
+    // Method to bring user to next screen
     private void launchNextActivity(){
         Intent intent = new Intent(
                 getApplicationContext(),ServiceActivity.class);

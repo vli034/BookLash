@@ -35,9 +35,6 @@ public class AppointmentActivity extends OptionsMenuActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
-
-
-
         //On Click Listeners
         btnNewAppt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,14 +46,11 @@ public class AppointmentActivity extends OptionsMenuActivity {
             }
         });
 
-
-
         //methods
         getDate();
-
-
-
     }
+
+
 
 
 

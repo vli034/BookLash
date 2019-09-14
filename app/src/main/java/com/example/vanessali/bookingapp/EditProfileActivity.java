@@ -103,9 +103,6 @@ public class EditProfileActivity extends AppCompatActivity {
         // Customizing ToolBar
         Toolbar toolbar = findViewById(R.id.include);
         setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("Edit Profile");
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
         toolBarTitle = findViewById(R.id.toolbar_title);
         toolBarTitle.setText("EDIT PROFILE");
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -216,7 +213,6 @@ public class EditProfileActivity extends AppCompatActivity {
 
                                /* FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                                 String current = user.getUid();//getting unique user id*/
-
 
                                 nameEdt.setText((CharSequence) document.get("firstName"));
                                 emailEdt.setText((CharSequence) document.get("email"));

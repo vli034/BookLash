@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
         passwordEdt = findViewById(R.id.edtPass);
         createAcc = findViewById(R.id.text_create_account);
         forgotPass = findViewById(R.id.text_forgot_pass);
-        // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();  // Initialize Firebase Auth
 
+        //on click listeners
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,8 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+                        if (task.isSuccessful()) { // Sign in success, update UI with the signed-in user's information
 
                             Intent intent = new Intent(
                                     getApplicationContext(),ProfileActivity.class);
@@ -142,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
         } else if(!Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()){
             // we return here true or false to indicate whether the user has inserted a valid email
-            // so if it does not match print error message
+            // so if it does not match -- print error message
             emailEdt.setError("Please enter a valid email address");
             return false;
         } else {
@@ -167,8 +166,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void inputValidation(){
-
-
         if(!emailValidation()| !passwordValidation()){
             Toast.makeText(this,"Incorrect Email or Password", Toast.LENGTH_LONG).show();
 

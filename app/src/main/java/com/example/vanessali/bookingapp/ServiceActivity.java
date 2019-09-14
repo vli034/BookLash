@@ -38,8 +38,6 @@ public class ServiceActivity extends OptionsMenuActivity {
                 Intent intent = new Intent(
                         getApplicationContext(),CalendarActivity.class);
                 startActivityForResult(intent, CLASSIC_FULL);
-                //String service = Str  ("classic set");
-                //intent.putExtra("classic", service);
                 startActivity(intent);
             }
         });

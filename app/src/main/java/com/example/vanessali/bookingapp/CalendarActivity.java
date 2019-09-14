@@ -38,10 +38,7 @@ public class CalendarActivity extends AppCompatActivity implements DialogBox.Dia
     private TextView toolBarTitle;
     private TextView timeOption1;
     private TextView timeOption2;
-    private TextView timeOption3;
-    private TextView timeOption4;
-    private TextView timeOption5;
-    private TextView timeOption6;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +89,6 @@ public class CalendarActivity extends AppCompatActivity implements DialogBox.Dia
         });
 
 
-
         timeOption1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -101,12 +97,6 @@ public class CalendarActivity extends AppCompatActivity implements DialogBox.Dia
         });
 
         //TODO create a method do that when a text  view is selected it knows to turn to different color
-        //try to fin dynamic way of doing it
-
-
-
-
-
 
     }
 

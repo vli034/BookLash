@@ -28,5 +28,3 @@ BookLash will provide clients the ability to see all the available time slots an
 - Date format should be String i.e ‘ Wednesday, June 12, 2019’
 - Dialog box should be class instead of activity 
 
-# Link to Design Doc 
-Formal document that includes UX/UI design. 

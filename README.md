@@ -7,8 +7,6 @@ BookLash will provide clients the ability to see all the available time slots an
 
 ![bookApp_artboard2](https://user-images.githubusercontent.com/39067937/60748081-4bd99580-9f58-11e9-9e34-9bb464236a0e.png)
 
-
-
 # Technology Used 
 - Firebase: 
   - Storage
@@ -23,7 +21,6 @@ BookLash will provide clients the ability to see all the available time slots an
   - Credit Card
   - Paypal 
 
-# Implemented Data Structures
 
 # Areas of this App that needs imporovement:
 - Camera API is deprecated
